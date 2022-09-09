@@ -9,7 +9,7 @@ Implement two methods:
 ## Instruction
 * See skeleton codes below for more details.
 * Do not remove assert lines and do not modify methods that start with an underscore.
-* Do not use the bag-of-words function implemented in scikit-learn or n-gram function in NLTK.
+* Do not use the bag-of-words and n-gram function from external packages such as scikit-learn or NLTK. Please implement those functions by yourself.
 * Before submit your code in KLMS, please change the name of the file to your student id (e.g., 2019xxxx.py).
 * Functionality and prediction accuracy for unknown test samples (i.e., we do not give them to you) will be your grade.
 * For functionality, we will run unit tests of `preprocess_and_split_to_tokens` and `create_bow`.
