@@ -1,0 +1,60 @@
+\documentclass[UTF8]{article}
+% Template based on https://www.overleaf.com/latex/templates/assignment-template/fwycphfzpshm
+
+\usepackage[authoryear]{natbib}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin=1in]{geometry}
+
+\title{CS475 Fall 2022 Homework 4}
+\author{
+  Team 0:  % team no
+  Juhee Son, Rifki Afina Putri, and Alice Oh  % your names
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+Language models like BERT \cite{devlin-etal-2019-bert} has become a standard architecture for NLP research ever since it was published. However, they still exhibit some social bias, such as gender, racial, or ethnic bias \cite{ahn-oh-2021-mitigating}.
+
+In this homework, your team will \textbf{review a paper} about ethnic bias in BERT models and \textbf{conduct an exploration} on bias in language models using \texttt{fill-mask} pipeline of \texttt{huggingface} library. 
+
+\section{Tasks}
+
+The tasks in this homework are as follows:
+\begin{enumerate}
+  \item Read "Mitigating Language-Dependent Ethnic Bias in BERT" paper \cite{ahn-oh-2021-mitigating} and put your review in the report. The review must contain several points:
+  \begin{enumerate}
+      \item What is this paper about and what contributions does it make?
+      \item What do you think are the main strengths and weaknesses of this paper?
+  \end{enumerate}
+  Please put your own words to make sure that you properly understand the contents of the paper. Your score will automatically be zero if we found that some plagiarism is involved. If you need to use any expression in the paper, please make sure that you use proper quotation for such expression.
+  \item Try \texttt{fill-mask} task on BERT or any other language models provided in \texttt{huggingface} library, and analyze the result. We provide a starter code (\texttt{fill\_mask.py}) for your exploration. Specifically, you have to:
+  \begin{enumerate}
+      \item Try different \texttt{targets}, \texttt{attribute}, or \texttt{template} other than presented in the starter code and the main contents of the paper. You can conduct an exploration of any languages, such as Korean, Arabic, Chinese, Indonesian, etc. We encourage you to use the readily available language models. Some models for languages other than English like Korean BERT or Indonesian BERT are available at \url{https://huggingface.co/models}.
+      \item Explain the modification that you use in your \texttt{fill-mask} exploration, show the model's output in the report\footnote{Please do not directly copy-and-paste the raw output. Present the result properly using some tables or graphs.}, and analyze: is the model present some bias in that particular setting and language? If yes, what is the reason? If not, what do you think makes the model do well on that setting?
+      \item Paper \cite{ahn-oh-2021-mitigating} provides some bias mitigation methods. Do you think the methods will work well on the languages in your exploration? Provide your reason and analysis. Also, what other improvements can potentially be applied to minimize the language-dependent ethnic bias of the model, specifically on your chosen languages?
+  \end{enumerate}
+\end{enumerate}
+
+\section{Submission}
+
+The files you should submit are
+\begin{enumerate}
+  \item Your team's report \texttt{report\_\{team\_no\}.pdf} (e.g., \texttt{report\_0.pdf}). \textbf{Use this \LaTeX\ file as a template}, and \textbf{do not change style attributes} in this file. The report must consists of \textbf{2-4 pages}. References are not included in the page-limit. You will get a \textbf{penalty (-10 points)} if you fail to follow this rule.
+  \item Your team's \texttt{fill\_mask\_\{team\_no\}.py} (e.g, \texttt{fill\_mask\_0.py}). Note that the code submission is not for checking the functionality of the code, but it is for checking whether we can reproduce the exploration results presented in your report. If you use other external libraries, please also provide your \texttt{requirements.txt} file.
+\end{enumerate}
+
+
+\section{Grading}
+
+Comprehensive evaluation based on clarity, validity, and interestingness of your report. You will get zero points if you violate academic integrity (e.g., plagiarism and data manipulation). Late submission will be penalized (-5 points/day).
+
+
+\pagebreak
+\bibliographystyle{plain}
+\bibliography{report}
+
+\end{document}
